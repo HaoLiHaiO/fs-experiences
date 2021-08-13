@@ -1,6 +1,6 @@
 import mongoose, { Schema } from 'mongoose'
 
-interface Post {
+interface PostMessage {
     title: string,
     message: string,
     creator: string,
@@ -10,7 +10,7 @@ interface Post {
     createdAt: { type: Date, default: Date }
 }
 
-const postSchema = new Schema<Post>({
+const postSchema = new Schema<PostMessage>({
     title: { type: String, required: true },
     message: { type: String, required: true },
     creator: { type: String, required: true },
@@ -25,3 +25,6 @@ const postSchema = new Schema<Post>({
         default: new Date()
     }
 });
+
+const PostMessage = mongoose.model<PostMessage>('PostMessage', postSchema)
+export default PostMessage;
