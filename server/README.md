@@ -8,3 +8,7 @@
  mongoose for the models for our posts (models are responsible for creating and
  reading docs from the underlying MongoDB database)
  - nodemon so that we don't need to reset the server each time
+
+ ### Important notes
+- import Request and Response types from express, otherwise, they are not 
+recognized
