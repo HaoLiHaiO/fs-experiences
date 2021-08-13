@@ -1,0 +1,1 @@
+# Sample full-stack project with ordinary features for future usage
