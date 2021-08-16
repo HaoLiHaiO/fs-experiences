@@ -1,12 +1,12 @@
-import Posts from "../components/Posts/Posts";
+/* eslint-disable import/no-anonymous-default-export */
 
-export default (posts = [], action) => {
+export default (posts = [], action: { type: any; payload: any; }) => {
     switch(action.type) {
         case 'FETCH_ALL':
-            return posts;
+            return action.payload;
         case 'CREATE':
             return posts;
         default:
-            return Posts;
+            return posts;
     }
 }
